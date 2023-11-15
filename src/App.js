@@ -1,5 +1,3 @@
-// src/App.js
-
 import React, { useState, useEffect } from 'react';
 
 const App = () => {
@@ -8,7 +6,7 @@ const App = () => {
 
   useEffect(() => {
     // Beim Mounten der Komponente Daten vom Backend abrufen
-    fetch('http://backend-container:5000/products')  // Beachte die Verwendung des Container-Namens als Host
+    fetch('http://backend-container:5000/products')  // Verwendung des Container-Namens als Host
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching data:', error));
