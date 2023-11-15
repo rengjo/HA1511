@@ -22,6 +22,5 @@ db.createUser({
       description: 'Description for Product 2',
       price: 29.99,
     },
-    // Add more products as needed
   ]);
   
