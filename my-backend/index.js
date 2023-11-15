@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors');  // Importiere das CORS-Modul
+const cors = require('cors');  // Importiere CORS-Modul
 
 const app = express();
 const port = 5000;
