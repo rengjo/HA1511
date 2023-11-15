@@ -1,0 +1,6 @@
+# Dockerfile für MongoDB
+
+FROM mongo:latest
+
+# Kopiere das Initialisierungsskript in den Container
+COPY ./mongo-init.js /docker-entrypoint-initdb.d/

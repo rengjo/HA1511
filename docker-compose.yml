@@ -1,0 +1,28 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./my-frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+
+  backend:
+    build:
+      context: ./my-backend
+    ports:
+      - "5000:5000"
+    networks:
+      - my-network
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
